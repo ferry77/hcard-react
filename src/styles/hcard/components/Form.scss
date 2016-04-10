@@ -1,0 +1,23 @@
+.hcard-form {
+  label {
+    text-transform: uppercase;
+  }
+  input[type="file"] {
+    display: none;
+  }
+  input:invalid {
+    border: 1px solid #ff2520;
+  }
+  .form-section-title {
+    font-size: 0.75rem;
+    color: #aeaeae;
+    border-bottom: 1px solid #aeaeae;
+    text-transform: uppercase;
+  }
+  .cta {
+    margin-top: 1rem;
+    .button {
+      font-size: 1.2rem;
+    }
+  }
+}
