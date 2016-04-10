@@ -24,10 +24,10 @@ class AppComponent extends React.Component {
                 avatarDataUrl: ''
             }
         };
-        this._handleFormChange = this._handleFormChange.bind(this);
+        this.handleFormChange = this.handleFormChange.bind(this);
     }
 
-    _handleFormChange(e) {
+    handleFormChange(e) {
         if(e.target instanceof FileReader) {
             this.setState({
                 hCard: Object.assign({}, this.state.hCard, {avatarDataUrl : e.target.result})
@@ -43,7 +43,7 @@ class AppComponent extends React.Component {
         return (
             <div className="row h-card-builder">
                 <div className="columns small-12 large-6 form">
-                    <HCardForm formData={this.state.hCard} handleFormChange={this._handleFormChange}></HCardForm>
+                    <HCardForm formData={this.state.hCard} handleFormChange={this.handleFormChange}></HCardForm>
                 </div>
                 <div className="columns small-12 large-6 preview">
                     <HCardPreview previewData={this.state.hCard}></HCardPreview>
